@@ -1,0 +1,38 @@
+@import "~./zul/less/_header.less";
+.search {
+	.z-bandbox {
+		&-input {
+			font-size: 12px;
+			line-height: 18px;
+			.borderRadius(4px 0 0 4px);
+			padding: 5px 10px 4px;
+			border: 0;
+			width: 120px;
+			height: 32px;
+			margin: 0px;
+			&:focus {
+				border: 0;
+				color: #777777;
+				outline: none;
+			}
+		}
+		
+		&-button {
+			border: 0px;
+			height: 32px;
+			padding: 9px;
+			&:hover {
+				.z-bandbox-icon {
+					opacity: 1;
+				}
+			}
+		}
+		
+		&-icon {
+			color: #FFF;
+			opacity: 0.5;
+		}
+	}
+}
+
+

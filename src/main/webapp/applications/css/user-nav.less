@@ -1,0 +1,101 @@
+@import "~./zul/less/_header.less";
+
+.user-nav {
+	.z-menubar {
+		border: 0;
+	    background: transparent;
+	}
+	li {
+		margin: 0;
+		
+		&:first-child a,
+		&:first-child:hover a {
+			.applyCSS3('border-top-left-radius', '4px');
+			.applyCSS3('border-bottom-left-radius', '4px');
+		}
+		
+		&:last-child a,
+		&:last-child:hover a  {
+			.applyCSS3('border-top-right-radius', '4px');
+			.applyCSS3('border-bottom-right-radius', '4px');
+		}
+		
+		a, &.z-menu-selected > a {
+			border: 1px solid #ccc;
+			.boxShadow('inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);');
+			border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+			.borderRadius('0');
+			min-height: 32px;
+			line-height: 23px;
+		}
+		
+		a {
+			&:hover{
+				.boxShadow('inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);');
+				border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+				.borderRadius('0');
+				
+				span,
+				i {
+					color: #FFFFFF;
+					opacity: 1;
+				}
+			}
+			.icon {
+				opacity: 0.5;
+			}
+			span {
+				color: #999;
+				text-shadow: none;
+			}
+		}
+		
+		&.z-menu-selected > a span,
+		&.z-menu-selected > a i {
+			color: #FFFFFF;
+			opacity: 1;
+		}
+	}
+}
+
+.navpp.z-menupopup {
+	background: #FFF;
+	.borderRadius('5px');
+	.boxShadow('0 5px 10px rgba(0,0,0,0.2)');
+	padding: 0;
+	
+	.z-menupopup-content {
+		padding: 6px 0;
+	}
+	.z-menupopup-separator,
+	.z-menu-image,
+	.z-menuitem-image {
+		display: none;
+	}
+	.z-menu-content,
+	.z-menuitem-content {
+		padding: 3px 20px;
+		line-height: 14px;
+	 	* {
+			text-shadow: none;
+		}
+		&:hover,
+		&:active {
+			color: #FFF;
+			border-color: transparent;
+			.borderRadius('0');
+			.boxShadow('none');
+		}
+	}
+	&:before {
+		position: absolute;
+		top: -7px;
+		left: 9px;
+		display: inline-block;
+		border-right: 7px solid transparent;
+		border-bottom: 7px solid #FFF;
+		border-left: 7px solid transparent;
+		border-bottom-color: #FFF;
+		content: '';
+	}
+}

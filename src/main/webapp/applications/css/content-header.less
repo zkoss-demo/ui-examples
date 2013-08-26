@@ -1,0 +1,216 @@
+@import "~./zul/less/_header.less";
+
+// tooltip
+.btn-tip.z-popup {
+	overflow: visible;
+	background: #222;
+	.borderRadius ('5px');
+	
+	.z-popup-content {
+		color: #ffffff;
+		white-space: nowrap;
+	}
+
+	&:before {
+		position: absolute;
+		top: -6px;
+		left: 44%;
+		display: inline-block;
+		border-right: 7px solid transparent;
+		border-bottom: 7px solid #222;
+		border-left: 7px solid transparent;
+		border-bottom-color: #222;
+		content: '';
+	}
+}
+
+// panel
+.z-panel-head , .z-panel-header {
+	padding: 0;
+	line-height: normal;
+	.verGradient (#fdfdfd , #eaeaea);
+	.borderRadius ('0px');
+	border-color: #CDCDCD;
+}
+
+.z-panel-header {
+	padding: 8px;
+}
+
+.z-caption {
+	height: auto;
+}
+
+.z-caption-content {
+	float: left;
+	opacity: .7;
+	line-height: 17px;
+	padding: 3px;
+}
+
+.z-caption-content:after {
+	content: '';
+	opacity: .7;
+	border-right: 1px solid #cdcdcd;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 36px;
+}
+
+.z-caption-content + .z-label {
+	color: #666666;
+	text-shadow: 0 1px 0 #ffffff;
+	float: left;
+	padding: 3px 12px;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 19px;
+	margin: 0;
+}
+
+.z-caption-content ~ .z-button {
+	float: right;
+}
+
+.site-stats {
+	background-color: #F5F5F5;
+	border: 1px solid #DDDDDD;
+	cursor: pointer;
+	margin: 0 0 10px;
+	padding: 13px 20px 10px;
+	position: relative;
+	display: inline-block;
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+	i {
+		margin: 5px 12px 0 0;
+	}
+
+	.z-label {
+		margin-left: 12px;
+		font-size: 12px;
+		color: #888888;
+		font-style: italic;
+	}
+}
+
+.site-stats:hover {
+	background-color: #EDEDED;
+}
+
+.z-panelchildren {
+	padding: 12px 15px;
+	border-color: #CDCDCD;
+}
+
+.stat-boxes {
+	margin: 20px 0 10px;
+	text-align: center;
+	.z-a {
+		.verGradient (#F9F9F9 , #EDEDED);
+		border: 1px solid #d5d5d5;
+		border-radius: 4px 4px 4px 4px;
+		.boxShadow ('0 1px 0 0 #FFFFFF inset, 0 1px 0 rgba(255,255,255,0.4)');
+		display: inline-block;
+		line-height: 18px;
+		margin: 0 10px 10px;
+		padding: 0 10px;
+		&:hover {
+			.verGradient (#FCFCFC , #F1F1F1);
+		}
+	}
+
+	.peity_bar_good , .peity_line_good {
+		color: #459D1C;
+	}
+
+	peity_bar_bad , .peity_line_bad {
+		color: #BA1E20;
+	}
+
+	.left {
+		border-right: 1px solid #DCDCDC;
+		box-shadow: 1px 0 0 0 #FFFFFF;
+		margin-right: 12px;
+		padding: 10px 14px 6px 4px;
+		font-size: 10px;
+		font-weight: bold;
+	}
+
+	.left , .right {
+		float: left;
+		text-shadow: 0 1px 0 #ffffff;
+		span {
+			display: block;
+		}
+	}
+
+	.right {
+		font-size: 12px;
+		padding: 12px 10px 7px 0;
+		text-align: center;
+		width: 70px;
+		color: #666666;
+		strong {
+			font-size: 26px;
+			margin-bottom: 3px;
+			margin-top: 6px;
+		}
+	}
+}
+
+.stat-boxes .z-label + .z-label {
+	span {
+		display: block ! important;
+	}
+
+	canvas {
+		display: none;
+	}
+}
+
+.tip-right.z-label {
+	float: right;
+	margin-top: 3px;
+	padding: 4px;
+}
+
+.separator.z-vlayout > .z-vlayout-inner:after {
+	content: '';
+	position: absolute;
+	border-bottom: 1px dotted #AEBDC8;
+	width: 200%;
+	bottom: 12px;
+	margin-left: -20px;
+}
+
+.separator.z-vlayout > .z-vlayout-inner:nth-child(3) {
+	padding: 0px ! important;
+	&:after {
+		bottom: -10px;
+	}
+}
+
+.separator.z-vlayout > .z-vlayout-inner:last-child:after {
+	display: none;
+}
+
+.more.z-a {
+	padding: 5px;
+	text-align: center;
+	display: block;
+	color: #888888;
+	margin-top: 10px;
+	&:hover {
+		background: #EEEEEE;
+	}
+}
+
+.z-image {
+	.applyCSS3 ('box-sizing' , 'content-box');
+	padding: 3px;
+	border: 1px solid #B6BCBF;
+}
+

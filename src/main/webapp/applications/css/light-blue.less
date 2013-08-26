@@ -1,0 +1,179 @@
+@import "~./zul/less/_header.less";
+body {
+	background-color: #8399b0;
+}
+
+.z-button,
+.btn-group > .btn {
+	.verGradient (#4b6176 , #243a4f);
+	border-color: #415466;
+	color: white;
+	text-shadow: none;
+	* , *:before , *:after {
+		color: white;
+	}
+
+	[class ^= "icon-"] , [class *= " icon-"] {
+		background-image: url("../bootstrap/img/glyphicons-halflings-white.png");
+	}
+
+	&:hover , &:active, &:focus {
+		background: #415466;
+		border-color: #415466;
+		color: white;
+	}
+
+	&:active {
+		.boxShadow ('inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05)');
+	}
+}
+
+.header {
+	.boxShadow ('0 1px 0 #2d4358');
+	.verGradient (#4b6176 , #243a4f);
+	border-bottom: 1px solid #8da4bb;
+}
+
+.search {
+	.z-bandbox-input {
+		color: #8699ad;
+		background: #415466;
+		.boxShadow ('3px 3px 3px rgba(0,0,0,0.16) inset, 0 1px 0 rgba(255,255,255,0.2)');
+		&:focus {
+			color: #c1ccd8;
+			.boxShadow ('3px 3px 3px rgba(0,0,0,0.16) inset, 0 1px 0 rgba(255,255,255,0.2)');
+		}
+	}
+
+	.z-bandbox-button , .z-bandbox-button:hover {
+		color: #8699ad;
+		background: #415466;
+		.boxShadow ('-3px 3px 3px rgba(0,0,0,0.16) inset, 0 1px 0 rgba(255,255,255,0.2)');
+	}
+}
+.sidebar {
+    > ul {
+        border-top: 1px solid #657c93;
+        border-bottom: 1px solid #9daab8;
+        
+
+            .z-nav-content,
+            .z-navitem-content {
+                border-top: 1px solid #9daab8;
+                border-bottom: 1px solid #657c93;
+                color: #c1ccd8;
+                
+                &:hover {
+                    background: #8da4bb;
+                }
+                > .z-nav-info {
+                    background: #485e73;
+                }
+            }
+        
+
+        .z-navitem-selected {
+            > .z-navitem-content {
+                .verGradient (#243a4f , #4b6176);
+                &:hover {
+                    .verGradient (#243a4f , #4b6176);
+                }
+            }
+        }
+
+        ul {
+            border-top: 1px solid #8399b0;
+            background: #788ca0;
+            .boxShadow ('0 0 3px rgba(0,0,0,0.3) inset');
+            
+            .z-nav-content,
+            .z-navitem-content {
+                border-top: 1px solid #8ca1b6;
+                border-bottom: 1px solid #677a8d;
+                color: #a8bacd;
+                
+                &:hover {
+                    background: #7f94a9;
+                }
+            }
+            .z-navitem-selected {
+                > .z-navitem-content {
+                    background: #788ca0;
+                    
+                    &:hover {
+                        background: #788ca0;
+                    }
+                }
+            }
+        }
+    }
+}
+.user-nav {
+	.z-menu-content, .z-menuitem-content {
+		.verGradient (#4b6176 , #243a4f);
+		&:hover {
+			background: #243a4f;
+		}
+	}
+	.z-menu-selected .z-menu-content {
+		background: #243a4f;
+	}
+}
+
+
+.navpp .z-menu-content:hover , .navpp .z-menuitem-content:hover , .navpp .z-menu-content:active , .navpp .z-menuitem-content:active {
+	.verGradient(#4b6176 , #243a4f);
+}
+
+<c:if test="${zk.ie < 9}">
+.search {
+	.z-bandbox-input {
+		.resetGradient();
+		color: #8699ad;
+		background: #415466;
+		.boxShadow ('3px 3px 3px rgba(0,0,0,0.16) inset, 0 1px 0 rgba(255,255,255,0.2)');
+		&:focus {
+			color: #c1ccd8;
+			.boxShadow ('3px 3px 3px rgba(0,0,0,0.16) inset, 0 1px 0 rgba(255,255,255,0.2)');
+		}
+	}
+
+	.z-bandbox-button , .z-bandbox-button:hover {
+		.resetGradient();
+		color: #8699ad;
+		background: #415466;
+		.boxShadow ('-3px 3px 3px rgba(0,0,0,0.16) inset, 0 1px 0 rgba(255,255,255,0.2)');
+	}
+}
+.z-button:active,
+.z-button:hover,
+.z-button:focus {
+	.resetGradient();
+	background: #243a4f;
+}
+.btn-tip.z-popup {
+	.resetGradient();
+	background: #222;
+}
+.z-menubar {
+	> ul {
+		top: -5px;
+	}
+	.resetGradient();
+	.z-menu-content,
+	.z-menuitem-content,
+	.z-menu-selected .z-menu-content {
+		.resetGradient();
+		background: #243a4f;
+		border-color: #222;
+		border-bottom-color: #000;
+		
+		&:hover {
+			border-color: black;
+			.resetGradient();
+			background: #243a4f;
+		}
+	}
+}
+
+</c:if>

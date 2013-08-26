@@ -1,0 +1,309 @@
+<?page title="ZK 7 with Bootstrap Demo"?>
+<?component name="button" extends="button" width="44px" height="44px"?>
+<?link rel="stylesheet" type="text/css"	href="/applications/bootstrap/css/bootstrap.css" ?>
+<?link rel="stylesheet" type="text/css" href="/applications/css/index.css.dsp" ?>
+<?link rel="stylesheet" type="text/css"
+	href="/applications/css/user-nav.css.dsp" ?>
+<?link rel="stylesheet" type="text/css"
+	href="/applications/css/sidebar.css.dsp" ?>
+<?link rel="stylesheet" type="text/css"
+	href="/applications/css/search.css.dsp" ?>
+<?link rel="stylesheet" type="text/css"
+	href="/applications/css/content-header.css.dsp" ?>
+<?link id="theme" rel="stylesheet" type="text/css"
+	href="/applications/css/grey.css.dsp"  if="${param.theme eq 'grey' or empty param.theme}"?>
+<?link id="theme" rel="stylesheet" type="text/css"
+	href="/applications/css/red.css.dsp"  if="${param.theme eq 'red'}"?>
+<?link id="theme" rel="stylesheet" type="text/css"
+	href="/applications/css/light-blue.css.dsp"  if="${param.theme eq 'light-blue'}"?>
+
+<zk xmlns:n="native">
+	<popup id="btntip" sclass="btn-tip" style="margin-top: 10px">
+		<label id="msg" value="Manage Files"></label>
+		<attribute name="onOpen">
+		if (event.isOpen()) {
+			msg.setValue(event.getReference().getAttribute("title").toString());
+		}
+		</attribute>
+	</popup>
+				
+	<div sclass="header">
+		<n:h1>
+			<a>Admin</a>
+		</n:h1>
+	</div>
+
+	<div sclass="search">
+		<bandbox placeholder="Search here..." />
+	</div>
+	<div sclass="user-nav">
+		<menubar>
+			<menuitem iconSclass="icon icon-white icon-user" label="Profile" />
+			<menu iconSclass="icon icon-white icon-envelope" label="Messages">
+				<menupopup sclass="navpp">
+					<menuitem label="new message" />
+					<menuitem label="inbox" />
+					<menuitem label="outbox" />
+					<menuitem label="trash" />
+				</menupopup>
+			</menu>
+			<menuitem iconSclass="icon icon-white icon-cog" label="Settings" />
+			<menuitem iconSclass="icon icon-white icon-share-alt" label="Logout" />
+		</menubar>
+	</div>
+
+	<navbar orient="vertical" sclass="sidebar">
+		<navitem iconSclass="icon icon-white icon-home" label="Dashboard" selected="true"/>
+		<nav detailed="true" iconSclass="icon icon-white icon-th-list" label="Form elements">
+			<navitem label="Common elements"/>
+			<navitem label="Validation"/>
+			<navitem label="Wizard"/>
+		</nav>
+		<navitem iconSclass="icon icon-white icon-tint" label="Buttons &amp; icons"/>
+		<navitem iconSclass="icon icon-white icon-pencil" label="Interface elements"/>
+		<navitem iconSclass="icon icon-white icon-th" label="Tables"/>
+		<navitem iconSclass="icon icon-white icon-th-list" label="Grid Layout"/>
+		<nav detailed="true" iconSclass="icon icon-white icon-file" label="Sample pages">
+			<navitem label="Invoice"/>
+			<navitem label="Support chat"/>
+			<navitem label="Calendar"/>
+			<navitem label="Gallery"/>
+		</nav>
+	</navbar>
+
+	<div sclass="style-switcher">
+		<n:i class="icon-arrow-left icon-white"></n:i> <label>Style:</label>
+			<a id="grey" href="javascript: changeTheme('grey');"
+			style="background-color: #555555; border-color: #AAAAAA;"></a>
+			<a id="light-blue" href="javascript: changeTheme('light-blue');"
+			style="background-color: #8399b0;"></a>
+			<a id="red" href="javascript: changeTheme('red');"
+			style="background-color: #673232;"></a>		
+	</div>
+	
+	<div sclass="content">
+		<div sclass="content-header">
+			<n:h1>Dashboard</n:h1>
+				<div class="btn-group">
+					<button zclass="btn" iconSclass="icon-file" tooltip="btntip,after_center">
+						<custom-attributes title="Manage Files" />
+					</button>
+					<button zclass="btn" iconSclass="icon-user" tooltip="btntip,after_center">
+						<custom-attributes title="Manage Users" />
+					</button>
+					<button zclass="btn" iconSclass="icon-comment" tooltip="btntip,after_center">
+						<custom-attributes title="Manage Comments" />
+					</button>
+					<button zclass="btn" iconSclass="icon-shopping-cart" tooltip="btntip,after_center">
+						<custom-attributes title="Manage Orders" />
+					</button>
+				</div>
+		</div>
+		<div sclass="breadcrumb">
+			<a href="#" tooltip="btntip,after_center" iconSclass="icon-home">Home
+						<custom-attributes title="Go to Home" />
+						</a>
+			<a href="#">Dashboard</a>
+		</div>
+		<include src="zk/content.zul" />
+	</div>
+<script src="js/excanvas.min.js" type="" if="${zk.ie lt 9}" ></script>	
+<script src="js/jquery.flot.min.js"></script>
+<script src="js/jquery.peity.min.js"></script>
+<script><![CDATA[
+$(window).bind("popstate", function(e) {
+    var theme;
+    e = e.originalEvent;
+    if (e.state && (theme = e.state.theme)) {
+    	changeTheme(theme, true);
+    }
+});
+function changeTheme(theme, ignore) {
+	var $jq = jq('#theme'),
+		href = $jq.attr('href'),
+		lastIndex = href.lastIndexOf('/'),
+		
+		elem = zk.Widget.$('$' + theme).$n();
+	$jq.attr('href', href.substring(0, lastIndex + 1) + theme + '.css.dsp');
+
+	$(elem).siblings('a').css({'border-color':'transparent'});
+	$(elem).css({'border-color':'#aaaaaa'});
+	
+    if (!ignore) {
+    	if (history.pushState)
+    		history.pushState({theme: theme}, null, '?theme=' + theme);
+    
+	    $('.style-switcher').animate({marginRight:'-=140'}).find(':first-child')
+	    	.toggleClass('icon-arrow-left').toggleClass('icon-arrow-right');
+    }
+}
+              
+zk.afterMount(function(){
+
+	// === Style switcher === //
+	$('.style-switcher i').click(function() {
+		if($(this).hasClass('icon-arrow-right')) {
+			$(this).parent().animate({marginRight:'-=140'});
+		} else {
+			$(this).parent().animate({marginRight:'+=140'});
+		}
+		$(this).toggleClass('icon-arrow-left').toggleClass('icon-arrow-right');
+	});
+});
+]]></script>
+<script><![CDATA[
+(function ($) {
+    var options = { }; // no options
+
+    function init(plot) {
+        function onResize() {
+            var placeholder = plot.getPlaceholder();
+
+            // somebody might have hidden us and we can't plot
+            // when we don't have the dimensions
+            if (placeholder.width() == 0 || placeholder.height() == 0)
+                return;
+
+            plot.resize();
+            plot.setupGrid();
+            plot.draw();
+            setTimeout(function () {
+            	zk.afterResize(onResize);
+            });
+        }
+        zk.afterResize(onResize);
+    }
+    
+    $.plot.plugins.push({
+        init: init,
+        options: options,
+        name: 'resize',
+        version: '1.0'
+    });
+})(jQuery);
+zk.afterResize(function(){
+	
+	
+	// === Prepare peity charts === //
+	unicorn.peity();
+	
+	// === Prepare the chart data ===/
+	var sin = [], cos = [];
+    for (var i = 0; i < 14; i += 0.5) {
+        sin.push([i, Math.sin(i)]);
+        cos.push([i, Math.cos(i)]);
+    }
+
+	// === Make chart === //
+    var plot = $.plot($(".chart"),
+           [ { data: sin, label: "sin(x)", color: "#BA1E20"}, { data: cos, label: "cos(x)",color: "#459D1C" } ], {
+               series: {
+                   lines: { show: true },
+                   points: { show: true }
+               },
+               grid: { hoverable: true, clickable: true },
+               yaxis: { min: -1.6, max: 1.6 }
+		   });
+    
+	// === Point hover in chart === //
+    var previousPoint = null;
+    $(".chart").bind("plothover", function (event, pos, item) {
+		
+        if (item) {
+            if (previousPoint != item.dataIndex) {
+                previousPoint = item.dataIndex;
+                
+                $('#tooltip').fadeOut(200,function(){
+					$(this).remove();
+				});
+                var x = item.datapoint[0].toFixed(2),
+					y = item.datapoint[1].toFixed(2);
+                    
+                unicorn.flot_tooltip(item.pageX, item.pageY,item.series.label + " of " + x + " = " + y);
+            }
+            
+        } else {
+			$('#tooltip').fadeOut(200,function(){
+					$(this).remove();
+				});
+            previousPoint = null;           
+        }   
+    });
+});
+
+// Referred from unicorn-admin-template
+unicorn = {
+		// === Peity charts === //
+		peity: function(){		
+			$.fn.peity.defaults.line = {
+				strokeWidth: 1,
+				delimeter: ",",
+				height: 24,
+				max: null,
+				min: 0,
+				width: 50
+			};
+			$.fn.peity.defaults.bar = {
+				delimeter: ",",
+				height: 24,
+				max: null,
+				min: 0,
+				width: 50
+			};
+			$(".peity_line_good span").peity("line", {
+				colour: "#B1FFA9",
+				strokeColour: "#459D1C"
+			});
+			$(".peity_line_bad span").peity("line", {
+				colour: "#FFC4C7",
+				strokeColour: "#BA1E20"
+			});	
+			$(".peity_line_neutral span").peity("line", {
+				colour: "#CCCCCC",
+				strokeColour: "#757575"
+			});
+			$(".peity_bar_good span").peity("bar", {
+				colour: "#459D1C"
+			});
+			$(".peity_bar_bad span").peity("bar", {
+				colour: "#BA1E20"
+			});	
+			$(".peity_bar_neutral span").peity("bar", {
+				colour: "#757575"
+			});
+		},
+
+		// === Tooltip for flot charts === //
+		flot_tooltip: function(x, y, contents) {
+			
+			$('<div id="tooltip">' + contents + '</div>').css( {
+				top: y + 5,
+				left: x + 5
+			}).appendTo("body").fadeIn(200);
+		}
+}
+if (zk.ie && zk.ie < 8) {
+	jq.alert("Your browser is not supported, please use the latest one! (IE8+)");
+}
+]]></script>
+<script if='${execution.serverName == "www.zkoss.org" or execution.serverName == "www.potix.com"}'><![CDATA[
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+var gafn = function () {
+if (window._gat) {
+	gafn = null;
+	try {
+		var pageTracker = _gat._getTracker("UA-121377-3");
+		pageTracker._setDomainName("zkoss.org");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+
+	} catch (e) {
+	}
+} else
+	setTimeout(gafn, 1000);
+};
+gafn();
+]]></script>
+</zk>

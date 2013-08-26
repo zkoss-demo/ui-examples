@@ -1,0 +1,103 @@
+<vlayout xmlns:n="native" style="padding: 20px">
+	<div class="row-fluid">
+		<div class="center" style="text-align: center;">
+			<hlayout sclass="stat-boxes">
+				<a>
+					<div class="left peity_bar_good">
+						<label>2,4,9,7,12,10,12</label>
+						+20%
+					</div>
+					<div class="right">
+						<n:strong>36094</n:strong>
+						Visits
+					</div>
+				</a>
+				<a>
+					<div class="left peity_bar_neutral">
+						<label>20,15,18,14,10,9,9,9</label>
+						0%
+					</div>
+					<div class="right">
+						<n:strong>1433</n:strong>
+						Users
+					</div>
+				</a>
+				<a>
+					<div class="left peity_bar_bad">
+						<label>3,5,9,7,12,20,10</label>
+						-50%
+					</div>
+					<div class="right">
+						<n:strong>8650</n:strong>
+						Orders
+					</div>
+				</a>
+				<a>
+					<div class="left peity_line_good">
+						<label>12,6,9,23,14,10,17</label>
+						+70%
+					</div>
+					<div class="right">
+						<n:strong>8650</n:strong>
+						Orders
+					</div>
+				</a>
+			</hlayout>
+		</div>
+	</div>
+	<panel border="normal">
+		<caption iconSclass="icon-signal">
+			Site Statistics
+			<button iconSclass="icon-refresh" label="Update stats"/>
+		</caption>
+		<panelchildren>
+			<hlayout>
+				<vlayout hflex="1">
+					<a hflex="1" sclass="site-stats" iconSclass="icon-user" label="1433">
+						<label>Total Users</label>
+					</a>
+					<a hflex="1" sclass="site-stats" iconSclass="icon-arrow-right" label="16">
+						<label>New users (last week)</label>
+					</a>
+					<a hflex="1" sclass="site-stats" iconSclass="icon-shopping-cart" label="259">
+						<label>Total Shop Items</label>
+					</a>
+					<a hflex="1" sclass="site-stats" iconSclass="icon-tag" label="8650">
+						<label>Total Orders</label>
+					</a>
+					<a hflex="1" sclass="site-stats" iconSclass="icon-repeat" label="29">
+						<label>Pending Orders</label>
+					</a>
+				</vlayout>
+				<div hflex="2" vflex="1" style="padding: 20px;">
+					<div sclass="chart" vflex="1"/>
+				</div>
+			</hlayout>
+		</panelchildren>
+	</panel>
+	<hlayout spacing="50px" style="margin-top:20px">
+		<panel border="normal" hflex="1" forEach="file,comment">
+			<caption iconSclass="icon-${each}">
+				Recent ${each eq 'file' ? 'Posts' : 'Comments'}
+				<label sclass="label label-info tip-right">${each eq 'file' ? 54 : 88}</label>
+			</caption>
+			<panelchildren style="padding-bottom: 0px">
+				<vlayout hflex="1" style="overflow:visible" spacing="25px" sclass="separator">
+					<hlayout spacing="10px" forEach="2,3,1">
+						<image src="img/av${each}.jpg"/>
+						<vlayout>
+							<label> By: neytiri on 2 Aug 2012, 09:27 AM, IP: 186.56.45.7 </label>
+							<a href="#">Vivamus sed auctor nibh congue, ligula vitae tempus pharetra...</a>
+							<hlayout>
+								<button sclass="btn-primary btn-mini" zclass="btn" label="Edit"/>
+								<button sclass="btn-success btn-mini" zclass="btn" label="Publish"/>
+								<button sclass="btn-danger btn-mini" zclass="btn" label="Delete"/>
+							</hlayout>
+						</vlayout>
+					</hlayout>
+					<a class="more" href="#"> + View all + </a>
+				</vlayout>
+			</panelchildren>
+		</panel>
+	</hlayout>
+</vlayout>
