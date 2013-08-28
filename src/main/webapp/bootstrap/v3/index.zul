@@ -1,0 +1,12 @@
+<?page title="ZK Theme with Bootstrap 3"?>
+<?link rel="stylesheet" type="text/css"	href="/bootstrap/v3/bootstrap/css/bootstrap.css" ?>
+<zk xmlns:w="client" xmlns:n="native">
+<n:h3 id="btn-groups">Button groups</n:h3>
+<include src="zk/button-groups.zul"/>
+
+<n:h3 id="navbar">Navbar</n:h3>
+<include src="zk/navbar.zul"/>
+
+<n:h3 id="Panels">Panels</n:h3>
+<include src="zk/panel.zul"/>
+</zk>

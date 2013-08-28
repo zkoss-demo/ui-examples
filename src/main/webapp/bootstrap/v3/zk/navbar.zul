@@ -1,0 +1,16 @@
+<zk>
+	<script src="zk/js/navbar-bs.js" />
+
+	<navbar>
+		<navitem label="Link" selected="true" />
+		<navitem label="Link" />
+		<nav label="Dropdown">
+			<navitem label="Action" />
+			<navitem label="Another action" />
+			<navitem label="Something else here" />
+			<navitem label="Separated link" />
+			<navitem label="One more separated link" />
+		</nav>
+	</navbar>
+</zk>
+

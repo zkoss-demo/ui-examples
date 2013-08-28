@@ -1,0 +1,30 @@
+<zk>
+	<script src="zk/js/panel-bs.js" />
+	<panel>
+		<panelchildren>Panel content</panelchildren>
+	</panel>
+
+	<panel title="Panel title">
+		<panelchildren>Panel content</panelchildren>
+	</panel>
+
+	<panel title="Panel Primary" sclass="panel-primary">
+		<panelchildren>Panel content</panelchildren>
+	</panel>
+
+	<panel title="Panel Success" sclass="panel-success">
+		<panelchildren>Panel content</panelchildren>
+	</panel>
+
+	<panel title="Panel Info" sclass="panel-info">
+		<panelchildren>Panel content</panelchildren>
+	</panel>
+
+	<panel title="Panel Warning" sclass="panel-warning">
+		<panelchildren>Panel content</panelchildren>
+	</panel>
+
+	<panel title="Panel Danger" sclass="panel-danger">
+		<panelchildren>Panel content</panelchildren>
+	</panel>
+</zk>
