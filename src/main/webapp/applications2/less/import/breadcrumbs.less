@@ -1,0 +1,84 @@
+.breadcrumbs {
+  position: relative;
+  border-bottom: 1px solid #E5E5E5;
+  background-color: #F5F5F5;
+  min-height: @bcHeight;
+  line-height: (@bcHeight - 1);
+  padding: 0 12px 0 0;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  display: inline-block;
+  line-height: 24px;
+  margin: 0 22px 0 12px;
+  padding: 0;
+  color: #333;
+  .borderRadius(0);
+  > .z-a {
+    color: #4C8FBD;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+    & + .z-label {
+      padding-right: 4px;
+      &:before {
+        .baseIconFont();
+        .iconFontStyle(14px, #B2B6BF);
+        content: "\f105";
+        margin-right: 2px;
+        padding: 0 5px 0 2px;
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+  .z-label, .home-icon {
+    color: #555;
+  }
+  .home-icon {
+    margin-left: 4px;
+    margin-right: 2px;
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+    cursor: default;
+  }
+}
+.nav-search {
+  position: absolute;
+  top: 6px;
+  right: 22px;
+  line-height: 24px;
+  .z-bandbox-input {
+    .fontStyle('Open Sans', 13px, normal, #666);
+    .size(152px, 28px);
+    border: 1px solid #6FB3E0;
+    .borderRadius(4px);
+    padding-left: 24px;
+    padding-right: 6px;
+    &:focus {
+      .boxShadow(none);
+    }
+  }
+  .z-bandbox-button {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: 3px;
+    min-width: 19px;
+    .resetGradient();
+    line-height: auto;
+    padding: 0;
+    &, &:hover, &:focus, &:active {
+      background-color: transparent;
+      border: 0;
+      .boxShadow(none);
+    }
+    & [class*="z-icon-"] {
+      .iconFontStyle(14px, #6FB3E0);
+      line-height: 24px;
+    }
+  }
+
+}

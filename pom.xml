@@ -5,7 +5,7 @@
 	<artifactId>ui-examples</artifactId>
 	<version>0.8.0-SNAPSHOT</version>
 	<properties>
-		<zk.version>7.0.0-Preview</zk.version>
+		<zk.version>7.0.0-RC</zk.version>
 		<commons-io>1.3.1</commons-io>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>

@@ -1,0 +1,42 @@
+.z-progressmeter {
+  height: 9px;
+  border: 0;
+  background-image: none;
+  background-color: #DADADA;
+
+  &-image {
+    display: inline-block;
+    .resetGradient();
+    background-color: #2A91D8;
+  }
+}
+
+// Striped bars
+.z-progressmeter.striped .z-progressmeter-image {
+  #gradient > .striped(@progress-bar-bg);
+  background-size: 40px 40px;
+}
+
+.z-progressmeter.active .z-progressmeter-image {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+     -moz-animation: progress-bar-stripes 2s linear infinite;
+      -ms-animation: progress-bar-stripes 2s linear infinite;
+       -o-animation: progress-bar-stripes 2s linear infinite;
+          animation: progress-bar-stripes 2s linear infinite;
+}
+
+.progressmeter-variant(@color) {
+  .z-progressmeter-image {
+    .progress-bar-variant(@color);
+  }
+}
+
+.progressmeter-danger {
+ .progressmeter-variant(@progress-danger);
+}
+.progressmeter-success {
+ .progressmeter-variant(@progress-success);
+}
+.progressmeter-warning {
+ .progressmeter-variant(@progress-warning);
+}

@@ -1,0 +1,22 @@
+<vlayout sclass="page-content" xmlns:n="native" spacing="0">
+  <div sclass="page-header">
+    <label value="Dashboard"/>
+    <a label="overview &amp; stats" iconSclass="z-icon-double-angle-right" sclass="subtitle"/>
+  </div>
+  <include src="content/alert.zul"/>
+  <separator height="12px"/>
+  <hlayout spacing="24px">
+    <include src="content/infobox.zul" hflex="7"/>
+    <include src="content/piechart.zul" hflex="5"/>
+  </hlayout>
+  <separator bar="true"/>
+  <hlayout spacing="24px">
+    <include src="content/domain.zul" hflex="5"/>
+    <include src="content/saleschart.zul" hflex="5"/>
+  </hlayout>
+  <separator bar="true"/>
+  <hlayout spacing="24px">
+    <include src="content/tabbox.zul" hflex="7" style="position: relative;"/>
+    <include src="content/conversation.zul" hflex="6"/>
+  </hlayout>
+</vlayout>
