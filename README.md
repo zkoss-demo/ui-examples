@@ -10,14 +10,14 @@ About the layout design:
  * Applications2 is owned by [EasyMind](https://wrapbootstrap.com/theme/ace-responsive-admin-template-WB0B30DGR)
 
 
- To use these design layouts in your own project, please contact the respective designers directly and purchase the appropriate licenses.
+ You can download these files for learning purposes and try out the code. To use these design layouts in your own project, please contact the respective designers directly and purchase the appropriate licenses.
 
 Here is the [application1 demo article](http://blog.zkoss.org/index.php/2013/08/13/zk-7-new-theme-system-with-bootstrap-css-3/)
 
 Here is the [application2 demo article](http://books.zkoss.org/wiki/Small_Talks/2013/November/Customizing_Bootstrap_Theme_Demonstration)
 
 
-###License
+###License and Copyright
 	
 * Demo Code - [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 * Unicorn Admin Template – [diablo9983](https://wrapbootstrap.com/theme/unicorn-admin-template-WB0F35928)
