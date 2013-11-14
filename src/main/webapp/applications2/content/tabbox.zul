@@ -1,0 +1,318 @@
+<zk xmlns:n="native">
+  <!-- Use anchor as Tabbox's header-->
+  <a label="RECENT" iconSclass="z-icon-rss orange" sclass="rcaption lighter"/>
+  <!-- Tabbox -->
+  <tabbox sclass="rtab">
+    <tabs>
+      <tab label="Comments"/>
+      <tab label="Members"/>
+      <tab label="Tasks" selected="true"/>
+    </tabs>
+    <tabpanels>
+      <!-- Tab Comments Content -->
+      <tabpanel>
+        <vlayout>
+          <grid height="300px" sclass="comments">
+            <columns>
+              <column width="50px" height="50px"/>
+              <column height="50px"/>
+            </columns>
+            <rows>
+              <row>
+                <div sclass="user">
+                  <image tooltiptext="Bob's Avatar" src="assets/avatars/avatar.png"/>
+                </div>
+                <div sclass="body">
+                  <a label="Bob Doe" href="#" sclass="name"/>
+                  <a label="6 min" iconSclass="z-icon-time" sclass="time green"/>
+                  <div sclass="text">
+                    <span class="z-icon-quote-left"/>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &#8230;
+                  </div>
+                  <div sclass="tools action">
+                    <a iconSclass="z-icon-pencil blue bigger-125" href="#"/>
+                    <a iconSclass="z-icon-trash red bigger-125" href="#"/>
+                  </div>
+                </div>
+              </row>
+              <row>
+                <div sclass="user">
+                  <image tooltiptext="Jennifer's Avatar" src="assets/avatars/avatar1.png"/>
+                </div>
+                <div sclass="body">
+                  <a label="Jennifer" href="#" sclass="name"/>
+                  <a label="15 min" iconSclass="z-icon-time" sclass="time blue"/>
+                  <div sclass="text">
+                    <span class="z-icon-quote-left"/>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &#8230;
+                  </div>
+                  <div sclass="tools action">
+                    <a iconSclass="z-icon-pencil blue bigger-125" href="#"/>
+                    <a iconSclass="z-icon-trash red bigger-125" href="#"/>
+                  </div>
+                </div>
+              </row>
+              <row>
+                <div sclass="user">
+                  <image tooltiptext="Joe's Avatar" src="assets/avatars/avatar2.png"/>
+                </div>
+                <div sclass="body">
+                  <a label="22 min" iconSclass="z-icon-time" sclass="time orange"/>
+                  <a label="Bob " href="#" sclass="name"/>
+                  <div sclass="text">
+                    <span class="z-icon-quote-left"/>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &#8230;
+                  </div>
+                  <div sclass="tools action">
+                    <a iconSclass="z-icon-pencil blue bigger-125" href="#"/>
+                    <a iconSclass="z-icon-trash red bigger-125" href="#"/>
+                  </div>
+                </div>
+              </row>
+              <row>
+                <div sclass="user">
+                  <image tooltiptext="Rita's Avatar" src="assets/avatars/avatar3.png"/>
+                </div>
+                <div sclass="body">
+                  <a label="Rita" href="#" sclass="name"/>
+                  <a label="55 min" iconSclass="z-icon-time" sclass="time red"/>
+                  <div sclass="text">
+                    <span class="z-icon-quote-left"/>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &#8230;
+                  </div>
+                  <div sclass="tools action">
+                    <a iconSclass="z-icon-pencil blue bigger-125" href="#"/>
+                    <a iconSclass="z-icon-trash red bigger-125" href="#"/>
+                  </div>
+                </div>
+              </row>
+            </rows>
+          </grid>
+          <div align="center">
+            <span sclass="z-icon-comments icon-2x green"/>
+            <a href="#" label="&#032;See all comments&#032;" sclass="link">
+              <span sclass="z-icon-arrow-right"/>
+            </a>
+          </div>
+          <separator sclass="double16 solid" bar="true"/>
+        </vlayout>
+      </tabpanel>
+      <!-- Tab Members Content -->
+      <tabpanel>
+        <vlayout>
+          <hlayout style="white-space: normal;" spacing="0" >
+            <div sclass="member">
+              <div sclass="user">
+                <image tooltiptext="Bob Doe's avatar" src="assets/avatars/user.jpg" />
+              </div>
+              <div sclass="body">
+                <a label="Bob Doe" href="#" sclass="name"/>
+                <a label="20 min" iconSclass="z-icon-time" sclass="time green"/>
+                <div sclass="relin">
+                  <span sclass="label label-warning label-sm">pending</span>
+                  <div sclass="relin">
+                    <button sclass="btn btn-minier bigger btn-yellow btn-no-border" iconSclass="z-icon-angle-down icon-only bigger-120" 
+                    popup="statustt, position=after_end"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div sclass="member">
+              <div class="user">
+                <image tooltiptext="Joe Doe's avatar" src="assets/avatars/avatar2.png"/>
+              </div>
+              <div sclass="body">
+                <a label="Joe Doe" href="#" sclass="name"/>
+                <a label="1 hour" iconSclass="z-icon-time" sclass="time green"/>
+                <div sclass="relin">
+                  <span sclass="label label-warning label-sm">pending</span>
+                  <div sclass="relin">
+                    <button sclass="btn btn-minier bigger btn-yellow btn-no-border" iconSclass="z-icon-angle-down icon-only bigger-120" 
+                    popup="statustt, position=after_end"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div sclass="member">
+              <div sclass="user">
+                <image tooltiptext="Jim Doe's avatar" src="assets/avatars/avatar.png" />
+              </div>
+              <div sclass="body">
+                <a label="Jim Doe" href="#" sclass="name"/>
+                <a label="2 hour" iconSclass="z-icon-time" sclass="time green"/>
+                <div sclass="relin">
+                  <span class="label label-warning label-sm">pending</span>
+                  <div sclass="relin">
+                    <button sclass="btn btn-minier bigger btn-yellow btn-no-border" iconSclass="z-icon-angle-down icon-only bigger-120" 
+                    popup="statustt, position=after_end"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div sclass="member">
+              <div sclass="user">
+                <image tooltiptext="Alex Doe's avatar" src="assets/avatars/avatar5.png" />
+              </div>
+              <div sclass="body">
+                <a label="Alex Doe" href="#" sclass="name"/>
+                <a label="3 hour" iconSclass="z-icon-time" sclass="time green"/>
+                <div sclass="relin">
+                  <span sclass="label label-danger label-sm">blocked</span>
+                </div>
+              </div>
+            </div>
+            <div sclass="member">
+              <div sclass="user">
+                <image tooltiptext="Bob Doe's avatar" src="assets/avatars/avatar2.png" />
+              </div>
+              <div sclass="body">
+                <a label="Bob Doe" href="#" sclass="name"/>
+                <a label="6 hour" iconSclass="z-icon-time" sclass="time green"/>
+                <div sclass="relin">
+                  <span sclass="label label-success label-sm arrowed-in">approved</span>
+                </div>
+              </div>
+            </div>
+            <div sclass="member">
+              <div sclass="user">
+                <image tooltiptext="Susan's avatar" src="assets/avatars/avatar3.png" />
+              </div>
+              <div sclass="body">
+                <a label="Susan" href="#" sclass="name"/>
+                <a label="yesterday" iconSclass="z-icon-time" sclass="time green"/>
+                <div sclass="relin">
+                  <span sclass="label label-success label-sm arrowed-in">approved</span>
+                </div>
+              </div>
+            </div>
+            <div sclass="member">
+              <div sclass="user">
+                <image tooltiptext="Phil Doe's avatar" src="assets/avatars/avatar4.png" />
+              </div>
+              <div sclass="body">
+                <a label="Phil Doe" href="#" sclass="name"/>
+                <a label="2 days ago" iconSclass="z-icon-time" sclass="time green"/>
+                <div sclass="relin">
+                  <span sclass="label label-info label-sm arrowed-in arrowed-in-right">online</span>
+                </div>
+              </div>
+            </div>
+            <div sclass="member">
+              <div sclass="user">
+                <image tooltiptext="Alexa Doe's avatar" src="assets/avatars/avatar1.png"/>
+              </div>
+              <div sclass="body">
+                <a label="Alexa Doe" href="#" sclass="name"/>
+                <a label="3 days ago" iconSclass="z-icon-time" sclass="time green"/>
+                <div sclass="relin">
+                  <span sclass="label label-success label-sm arrowed-in">approved</span>
+                </div>
+              </div>
+            </div>
+          </hlayout>
+        <div align="center">
+          <span sclass="z-icon-group icon-2x green"/>
+          <a href="#" label="&#032;See all members&#032;" sclass="link">
+            <span sclass="z-icon-arrow-right"/>
+          </a>
+        </div>
+        <separator sclass="double16 solid" bar="true"/>
+        </vlayout>
+      </tabpanel>
+      <!-- Tab Tasks Content -->
+      <tabpanel>
+        <a label="Sortable Lists" iconSclass="z-icon-list" sclass="green lighter rcaption"/>
+        <listbox id="lb" sclass="task" checkmark="true" multiple="true">
+          <listhead>
+              <listheader/>
+              <listheader width="100px"/>
+          </listhead>
+          <listitem draggable="true" droppable="true" onDrop="doDrop(event,self);" sclass="task-orange">
+            <listcell label="Answering customer questions" sclass="text"/>
+            <listcell>
+              <n:div class="pull-right easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="42" 
+              style="width:30px;height:30px;line-height:30px;">
+                <n:span class="percent">42</n:span>%
+              </n:div>
+            </listcell>
+          </listitem>
+          <listitem draggable="true" droppable="true" onDrop="doDrop(event,self);" sclass="task-red">
+            <listcell label="Fixing bugs" sclass="text"/>
+            <listcell>
+              <div sclass="pull-right action">
+                <a iconSclass="z-icon-pencil blue" href="#"/>
+                <a iconSclass="z-icon-trash red" href="#"/>
+                <a iconSclass="z-icon-flag green" href="#"/>
+              </div>
+            </listcell>
+          </listitem>
+          <listitem draggable="true" droppable="true" onDrop="doDrop(event,self);" sclass="task-default">
+            <listcell label="Adding new features" sclass="text"/>
+            <listcell/>
+          </listitem>
+          <listitem draggable="true" droppable="true" onDrop="doDrop(event,self);" sclass="task-blue">
+            <listcell label="Upgrading scripts used in template" sclass="text"/>
+            <listcell>
+              <button sclass="btn btn-minier bigger btn-primary pull-right" iconSclass="z-icon-cog"
+                popup="cogtt, position=after_end"/>
+            </listcell>
+          </listitem>
+          <listitem draggable="true" droppable="true" onDrop="doDrop(event,self);" sclass="task-grey">
+            <listcell label="Add new skins" sclass="text"/>
+            <listcell/>
+          </listitem>
+          <listitem draggable="true" droppable="true" onDrop="doDrop(event,self);" sclass="task-green">
+            <listcell label="Updating server software up" sclass="text"/>
+            <listcell/>
+          </listitem>
+          <listitem draggable="true" droppable="true" onDrop="doDrop(event,self);" sclass="task-pink">
+            <listcell label="Cleaning up" sclass="text"/>
+            <listcell/>
+          </listitem>
+        </listbox>
+        <popup id="cogtt" sclass="cog">
+          <a iconSclass="z-icon-ok green bigger-110" tooltip="markpp, position=start_center, delay=0"/>
+          <a iconSclass="z-icon-trash red bigger-110" tooltip="delepp, position=start_center, delay=0"/>
+        </popup>
+        <popup id="markpp" zclass="tooltip" sclass="tooltip-success left">
+          <span zclass="tooltip-arrow"/>
+          <label zclass="tooltip-inner" value="Mark as done"/>
+        </popup>
+        <popup id="delepp" zclass="tooltip" sclass="tooltip-error left">
+          <span zclass="tooltip-arrow"/>
+          <label zclass="tooltip-inner" value="Delete"/>
+        </popup>
+        <zscript><![CDATA[
+          import java.util.*;
+          import org.zkoss.zul.*;
+          
+          List children = lb.getChildren();
+          void doDrop(DropEvent event, Component droped) {
+            Component dragged = event.getDragged();
+            int from = children.indexOf(dragged);
+            int to = children.indexOf(droped);
+            droped.getParent().insertBefore(dragged, droped);
+          }
+        ]]></zscript>
+      </tabpanel>
+    </tabpanels>
+  </tabbox>
+  <!-- Popup of tab members -->
+  <popup id="statustt" sclass="cog" style="margin-left:8px">
+    <a iconSclass="z-icon-ok green bigger-110" tooltip="aprpp, position=end_center, delay=0"/>
+    <a iconSclass="z-icon-remove orange bigger-110" tooltip="rejpp, position=end_center, delay=0"/>
+    <a iconSclass="z-icon-trash red bigger-110" tooltip="trapp, position=end_center, delay=0"/>
+  </popup>
+  <popup id="aprpp" zclass="tooltip" sclass="right tooltip-success">
+    <span zclass="tooltip-arrow"/>
+    <label zclass="tooltip-inner" value="Approve"/>
+  </popup>
+  <popup id="rejpp" zclass="tooltip" sclass="right tooltip-warning">
+    <span zclass="tooltip-arrow"/>
+    <label zclass="tooltip-inner" value="Reject"/>
+  </popup>
+  <popup id="trapp" zclass="tooltip" sclass="right tooltip-error">
+    <span zclass="tooltip-arrow"/>
+    <label zclass="tooltip-inner" value="Delete"/>
+  </popup>
+</zk>

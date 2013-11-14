@@ -9,5 +9,8 @@
 		<value>example</value>
 	</preference>
 	-->
-	
+	<library-property>
+		<name>org.zkoss.zkmax.tablet.ui.disabled</name>
+		<value>true</value>
+	</library-property>
 </zk>

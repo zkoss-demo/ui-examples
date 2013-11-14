@@ -1,0 +1,170 @@
+
+/* labels & badges */
+.label {
+  .borderRadius(0);
+  text-shadow: none;
+  font-weight: normal;
+  display: inline-block;
+  background-color: @label-default !important;
+}
+
+.badge {
+  text-shadow: none;
+  font-size: 12px;
+  padding-top: 1px;
+  padding-bottom: 3px;
+  font-weight: normal;
+  line-height: 15px;
+  background-color: @label-default !important;
+}
+
+//labels
+.label-color(@color) {
+  @label-class: ~`"label-@{color}"`;
+  @badge-class: ~`"badge-@{color}"`;
+  @label-color: @@label-class;
+
+  .@{label-class}, .@{badge-class} {
+    background-color: @label-color !important;
+  }  
+}
+
+.label-arrow(@color) {
+   @label-class: ~`"label-@{color}"`;
+   @label-color: @@label-class;
+
+  .@{label-class} {
+  	&.arrowed:before {
+  		border-right-color: @label-color;
+  	}
+  	&.arrowed-in:before {
+  		border-color: @label-color;
+  	}
+  	&.arrowed-right:after {
+  		border-left-color: @label-color;
+  	}
+  	&.arrowed-in-right:after {
+  		border-color: @label-color;
+  	}
+  }
+}
+
+.label-color(~"grey");
+.label-color(~"info");
+.label-color(~"primary");
+.label-color(~"success");
+.label-color(~"danger");
+.label-color(~"important");
+.label-color(~"inverse");
+.label-color(~"warning");
+.label-color(~"pink");
+.label-color(~"purple");
+.label-color(~"yellow");
+.label-color(~"light");
+
+
+.badge-yellow, .label-yellow {
+	color: #996633 !important;
+	border-color: @label-yellow;
+}
+
+.label.arrowed, .label.arrowed-in {
+  position: relative;
+  z-index: 1;
+  &:before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    border: 1px solid transparent;
+    border-right-color: @label-default;
+  }
+}
+.label.arrowed-in:before {
+	border-color: @label-default;
+	border-left-color: transparent !important;
+}
+
+.label.arrowed-right , .label.arrowed-in-right {
+  position: relative;
+  z-index: 1;
+  &:after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    border: 1px solid transparent;
+    border-left-color: @label-default;
+  }
+}
+.label.arrowed-in-right:after {
+	border-color: @label-default;
+	border-right-color: transparent !important;
+}
+
+.label-arrow(~"info");
+.label-arrow(~"primary");
+.label-arrow(~"success");
+.label-arrow(~"warning");
+.label-arrow(~"important");
+.label-arrow(~"danger");
+.label-arrow(~"inverse");
+.label-arrow(~"pink");
+.label-arrow(~"purple");
+.label-arrow(~"yellow");
+.label-arrow(~"light");
+.label-arrow(~"grey");
+
+.label {
+  .label-size(12px, 1.15, 20px, 10px, 5px);
+}
+
+.label-sm {
+  padding:0.2em 0.4em 0.3em;
+  .label-size(11px, 1, 18px, 9px, 4px);
+}
+
+.label > span , .label > [class*="z-icon-"] {
+  line-height: 1;
+  vertical-align: bottom;
+}
+
+.label-size(@font-size, @line-height, @height, @border-height, @border-width) {
+  font-size: @font-size;
+  line-height: @line-height;
+  height: @height;
+  &.arrowed {
+	 margin-left: @border-width;
+  	&:before {
+  		left: -(@border-width * 2);
+  		border-width: @border-height @border-width;
+  	}
+  }
+  &.arrowed-in {
+  	margin-left: (@border-width);
+  	&:before {
+  		left: -@border-width;
+  		border-width: @border-height @border-width;
+  	}
+  }
+
+  &.arrowed-right {
+  	margin-right: @border-width;
+  	&:after {
+  		right: -(@border-width * 2);
+  		border-width: @border-height @border-width;
+  	}
+  }
+  &.arrowed-in-right {
+    margin-right: (@border-width);
+  	&:after {
+  		right: -@border-width;
+  		border-width: @border-height @border-width;
+  	}
+  }
+}
+
+
+

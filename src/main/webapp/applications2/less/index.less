@@ -1,0 +1,79 @@
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+@import "import/zk/_header.less";
+@import "import/variables.less";
+@import "import/general.less";
+@import "import/utility.less";
+@import "import/navbar.less";
+@import "import/sidebar.less";
+@import "import/breadcrumbs.less";
+@import "import/button.less";
+@import "import/label-badge.less";
+@import "import/infobox.less";
+@import "import/layout.less";
+@import "import/mesh.less";
+@import "import/popup.less";
+@import "import/progressmeter.less";
+@import "import/3rdparty.less";
+
+body {
+	padding: 0;
+	background-color: @bodyBackground;
+	min-height: 100%;
+	.fontStyle('Open Sans', 13px, normal);
+	color: @textColor;
+	line-height: 1.5;
+}
+
+.navbar {
+	margin: 0;
+	padding: 0 20px;
+	border: 0;
+	min-height: 45px;
+	position: relative;
+	background: #438eb9;
+	.borderRadius(0);
+	&-brand {
+		color: @navTextColor;
+		font-size: @brandSize;
+		text-shadow: none;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		letter-spacing: 1px;
+		&:hover,
+		&:focus {
+			color: @navTextColor;
+		}
+	}
+}
+
+.page-content {
+	background: #fff;
+	margin: 0;
+	padding: 8px 20px 24px;
+}
+
+.page-header {
+	margin: 0 0 12px;
+	border-bottom: 1px dotted #E2E2E2;
+	padding-bottom: 16px;
+	padding-top: 7px;
+	.z-label {
+		padding: 0;
+		margin: 0 8px;
+		font-size: 24px;
+		font-weight: lighter;
+		color: #2679B5;
+	}
+	.subtitle {
+		font-size: 14px;
+		cursor: default;
+		&, & i {
+			margin: 0 6px;
+		}
+		&, &:hover, &:focus {
+			color: #8089A0;
+		}
+	}
+}
+

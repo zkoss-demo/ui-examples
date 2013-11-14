@@ -1,0 +1,122 @@
+a {
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+}
+
+.z-a,
+.z-button,
+.z-label,
+.z-menu-text, .z-menuitem-text,
+.z-nav-text, .z-navitem-text {
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+}
+
+.z-a {
+  > [class*="icon-"] {
+    margin-right: 5px;
+  }
+	&[disabled] {
+    color: #669FC7;
+	}
+}
+
+.link.z-a:hover {
+  text-decoration: underline;
+}
+
+.z-caption {
+    min-height: 38px;
+    padding-left: 3px;
+    font-size: 18px;
+  &.small {
+    min-height: 31px;
+    padding-left: 10px;
+    .z-caption-content {
+      line-height: 30px;
+      font-size: 15px;
+    }
+  }
+  &-content {
+    padding: 0;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    line-height: 32px;
+    & [class*="z-icon-"] {
+      margin-right: 5px
+    }
+  }
+  .z-button {
+    margin: 3px 8px;
+    &:after {
+      content: "\f107";
+      .displaySize(inline-block, 14px, 14px);
+      .baseIconFont();
+      .iconFontStyle(13px, #FFF);
+      content: "\f107";
+      margin-left: 2px;
+    }
+  }
+}
+
+/* Customize horizontal separtor */
+.z-separator-horizontal-bar {
+  position: relative;
+  height: 64px;
+  background-image: none;
+  &:before {
+    .displaySize(block, 100%, 0);
+    content: "";
+    border-width: 0;
+    border-top: 1px dotted #E3E3E3;
+    position: absolute;
+    top: 32px;
+  }
+}
+
+.double16.z-separator-horizontal-bar {
+  height: 16px;
+  &:before {
+    height: 3px;
+    border-bottom: 1px dotted #E3E3E3;
+    top: 6px;
+  }
+}
+
+.solid.z-separator-horizontal-bar {
+  &:before {
+    border-style: solid;
+  }
+}
+
+/* Customize the scrollbar in Meshwidget */
+.z-scrollbar.z-scrollbar-vertical {
+  width: 7px;
+  .z-scrollbar-up, .z-scrollbar-down,
+  .z-scrollbar-icon, .z-scrollbar-rail {
+    display: none;
+  }
+  .z-scrollbar-wrapper {
+    top: 0;
+    .z-scrollbar-indicator {
+      background-image: none;
+      .borderRadius(0);
+      background-color: #999;
+      border: 0;
+    }
+    .z-scrollbar-rail {
+      background-color: transparent;
+    }
+  }
+}
+
+.z-drop-ghost {
+  .z-drop-content {
+    width: auto;
+    height: auto;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    border: 1px solid #CCC; 
+  }
+}

@@ -1,0 +1,129 @@
+
+.z-button {
+	position: relative;
+	padding: 3px 12px;
+	.borderRadius(0);
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	min-height: 0;
+	color: #FFF !important;
+	//.transition(~"all ease .15s");
+	.transition(all, ease, .15s);
+	
+	&:active {
+		top: 1px;
+		left: 1px;
+	}
+	
+	&, &:hover, &:focus, &:active {
+		.resetGradient();
+	}
+
+	/* Icon in the button */
+	> [class*="z-icon-"] {
+		display: inline;
+		margin-right: 4px;
+	}
+
+	> .icon-only[class*="z-icon-"] {
+		margin: 0;
+		vertical-align: middle;
+		text-align: center;
+		padding: 0;
+	}
+}
+
+.btn {
+	color: #FFF !important;
+}
+
+/** buttons */
+
+.btn-sm {
+	border-width:4px;
+	font-size: 13px;
+	padding: 4px 9px;
+	line-height: 1.39;
+}
+
+.btn-xs {
+	border-width: 3px;
+}
+
+.btn-minier {
+	padding: 0 4px;
+	line-height: 18px;
+	border-width: 2px;
+	font-size: 12px;
+}
+
+//button color
+.btn-color(@color1, @color2) {
+  & , &:focus {
+		background-color: @color1 !important;
+		border-color: @color1;
+  }
+  &:hover, &.open {
+		background-color: @color2 !important;
+		border-color: @color1;
+  }
+  &.no-border:hover {
+		border-color: @color2;
+  }
+  &.no-hover:hover {
+		background-color: @color1 !important;
+  }
+}
+
+.btn-color(@color-name) {
+	@color1-name : ~`"btn-@{color-name}"`;
+	@color2-name : ~`"btn-@{color-name}-hover"`;
+
+	.btn-color(@@color1-name, @@color2-name);
+}
+
+
+.btn-primary {
+	.btn-color(~"primary");
+}
+.btn-info {
+	.btn-color(~"info");
+}
+.btn-success {
+	.btn-color(~"success");
+}
+.btn-warning {
+	.btn-color(~"warning");
+}
+.btn-danger {
+	.btn-color(~"danger");
+}
+.btn-inverse {
+	.btn-color(~"inverse");
+}
+.btn-pink {
+	.btn-color(~"pink");
+}
+
+.btn-yellow {
+	.btn-color(~"yellow");
+	color: @btn-yellow-color !important;
+	text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.4) !important;
+}
+
+.btn-sm > [class*="z-icon-"] {
+	margin-right: 3px;
+	
+	&.icon-on-right {
+		margin-right: 0;
+		margin-left: 3px;
+	}
+}
+
+.btn-xs > [class*="z-icon-"], 
+.btn-minier > [class*="z-icon-"] {
+	margin-right: 2px;
+}
+
+.z-button.btn-no-border {
+	border-width: 0 !important;
+}

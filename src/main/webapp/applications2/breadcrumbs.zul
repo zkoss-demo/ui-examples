@@ -1,0 +1,11 @@
+<div sclass="breadcrumbs">
+	<div sclass="breadcrumb">
+		<span sclass="home-icon z-icon-home"/>
+    <a label="Home" href="#"/>
+		<label value="Dashboard"/>
+	</div>
+  <!-- Search input-->
+	<div sclass="nav-search">
+		<bandbox placeholder="Search ..." sclass="input-prepend"/>
+	</div>
+</div>	
