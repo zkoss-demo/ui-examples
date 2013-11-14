@@ -168,4 +168,24 @@ if (zk.ie && zk.ie < 8) {
 	jq.alert("Your browser is not supported, please use the latest one! (IE8+)");
 }
 	]]></script>
+	<script if='${execution.serverName == "www.zkoss.org" or execution.serverName == "www.potix.com"}'><![CDATA[
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+var gafn = function () {
+if (window._gat) {
+	gafn = null;
+	try {
+		var pageTracker = _gat._getTracker("UA-121377-3");
+		pageTracker._setDomainName("zkoss.org");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+
+	} catch (e) {
+	}
+} else
+	setTimeout(gafn, 1000);
+};
+gafn();
+]]></script>
 </zk>
