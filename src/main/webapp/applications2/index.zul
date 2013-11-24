@@ -24,7 +24,7 @@
 
 	<!-- Include the jQuery plugins to draw the chart -->
 	<script src="js/excanvas.min.js" if="${zk.ie lt 9}"/>
-	<script src="js/jquery.easypiechart.min.js"></script>
+	<script src="js/jquery.easy-pie-chart.min.js"></script>
 	<script src="js/jquery.flot.min.js"/>
 	<script src="js/jquery.flot.pie.js"/>
 	<script src="js/jquery.sparkline.min.js"></script>
