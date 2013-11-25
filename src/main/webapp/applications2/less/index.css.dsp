@@ -2106,15 +2106,15 @@ a:focus {
   border: 1px solid #DDD;
   border-left-width: 3px;
 }
-.task.z-listbox .z-listitem.task.z-listbox .z-listitem-selected {
+.task.z-listbox .z-listitem-selected {
   color: #8090A0;
   background-color: #F4F9FC;
 }
-.task.z-listbox .z-listitem.task.z-listbox .z-listitem-selected > .z-listcell,
-.task.z-listbox .z-listitem.task.z-listbox .z-listitem-selected:hover > .z-listcell {
+.task.z-listbox .z-listitem-selected > .z-listcell,
+.task.z-listbox .z-listitem-selected:hover > .z-listcell {
   background-image: none;
 }
-.task.z-listbox .z-listitem.task.z-listbox .z-listitem-selected .z-listcell.text .z-listcell-content {
+.task.z-listbox .z-listitem-selected .z-listcell.text .z-listcell-content {
   text-decoration: line-through;
   color: #8090A0;
 }
