@@ -1,7 +1,7 @@
 <panel border="normal" sclass="traffic">
   <caption iconSclass="z-icon-signal" label="Traffic Sources" sclass="small">
     <button label="This Week" sclass="btn btn-minier btn-primary pull-right" 
-      popup="datepp, position=after_end"/>
+      popup="datepp, position=after_end, type=toggle"/>
     <popup id="datepp" width="125px" sclass="date">
       <listbox>
           <listitem label="This Week" selected="true"/>

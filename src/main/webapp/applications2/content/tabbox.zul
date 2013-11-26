@@ -253,8 +253,8 @@
           <listitem draggable="true" droppable="true" sclass="task-blue">
             <listcell label="Upgrading scripts used in template" sclass="text"/>
             <listcell>
-              <button sclass="btn btn-minier bigger btn-primary pull-right" iconSclass="z-icon-cog"
-                popup="cogtt, position=after_end"/>
+              <button sclass="btn btn-minier bigger btn-primary pull-right" iconSclass="z-icon-cog icon-only"
+                popup="cogtt, position=after_end, type=toggle"/>
             </listcell>
           </listitem>
           <listitem draggable="true" droppable="true" sclass="task-grey">
