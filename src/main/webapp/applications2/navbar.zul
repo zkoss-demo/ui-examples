@@ -6,7 +6,7 @@
 		<a id="atask" iconSclass="z-icon-tasks" popup="taskpp, position=after_end, type=toggle" sclass="grey">
 			<label value="4" sclass="badge badge-grey"/>
 		</a>
-		<a id="anoti" iconSclass="z-icon-bell-alt" popup="notipp, position=after_end, type=toggle" sclass="purple">
+		<a id="anoti" iconSclass="z-icon-bell" popup="notipp, position=after_end, type=toggle" sclass="purple">
 			<label value="8" sclass="badge badge-important"/>
 		</a>
 		<a id="amsg" iconSclass="z-icon-envelope" popup="msgpp, position=after_end, type=toggle" sclass="green">
@@ -26,7 +26,7 @@
 	</hlayout>
 	<!-- Popups of navbar -->
 	<popup id="taskpp" sclass="menu" width="240px">
-		<a label="4 Tasks to complete" sclass="header" iconSclass="z-icon-ok"/>
+		<a label="4 Tasks to complete" sclass="header" iconSclass="z-icon-check"/>
 		<vlayout spacing="0">
 			<a href="#">
 				<div>
@@ -60,23 +60,28 @@
 		</vlayout>
 	</popup>
 	<popup id="notipp" sclass="menu menu-pink" width="240px">
-			<a label="8 Notifications" sclass="header" iconSclass="z-icon-warning-sign"/>
+			<a label="8 Notifications" sclass="header" iconSclass="z-icon-exclamation-triangle"/>
 			<vlayout spacing="0">
-				<a label="New Comments" iconSclass="btn btn-xs no-hover btn-pink z-icon-comment" href="#">
+				<a iconSclass="btn btn-xs no-hover btn-pink z-icon-comment" href="#">
+					<label>New Comments</label>
 					<label value="+12" class="badge badge-info pull-right"/>
 				</a>
-				<a label="Bob just signed up as an editor ..." iconSclass="btn btn-xs no-hover btn-primary z-icon-user" href="#"/>
-				<a label="New Orders" iconSclass="btn btn-xs no-hover btn-success z-icon-shopping-cart" href="#">
+				<a iconSclass="btn btn-xs no-hover btn-primary z-icon-user" href="#">
+					<label>Bob just signed up as an editor ...</label>
+				</a>
+				<a iconSclass="btn btn-xs no-hover btn-success z-icon-shopping-cart" href="#">
+					<label>New Orders</label>
 					<label value="+8" class="badge badge-info pull-right"/>
 				</a>
-				<a label="Followers" iconSclass="btn btn-xs no-hover btn-info z-icon-twitter" href="#">
+				<a iconSclass="btn btn-xs no-hover btn-info z-icon-twitter" href="#">
+					<label>Followers</label>
 					<label value="+11" class="badge badge-info pull-right"/>
 				</a>
 				<a label="See all notifications" href="#"><span class="z-icon-arrow-right"/></a>
 		</vlayout>
 	</popup>
 	<popup id="msgpp" sclass="menu" width="240px">
-		<a label="5 Messages" sclass="header" iconSclass="z-icon-envelope-alt"/>
+		<a label="5 Messages" sclass="header" iconSclass="z-icon-envelope-o"/>
 		<vlayout spacing="0">
 			<a href="#">
 				<image tooltiptext="Alex's Avatar" src="assets/avatars/avatar.png" sclass="msg-photo"/>
@@ -85,7 +90,7 @@
 						<label value="Alex:" sclass="blue"/>
 						Ciao sociis natoque penatibus et auctor ...
 					</span>
-					<span sclass="msg-time"><span class="z-icon-time"/>a moment ago</span>
+					<span sclass="msg-time"><span class="z-icon-clock-o"/>a moment ago</span>
 				</span>
 			</a>
 			<a href="#">
@@ -95,7 +100,7 @@
 						<label value="Susan:" sclass="blue"/>
 						Vestibulum id ligula porta felis euismod ...
 					</span>
-					<span sclass="msg-time"><span class="z-icon-time"/>20 minutes ago</span>
+					<span sclass="msg-time"><span class="z-icon-clock-o"/>20 minutes ago</span>
 				</span>
 			</a>
 			<a href="#">
@@ -105,7 +110,7 @@
 						<label value="Bob:" sclass="blue"/>
 						Nullam quis risus eget urna mollis ornare ...
 					</span>
-					<span sclass="msg-time"><span class="z-icon-time"/>3:15 pm</span>
+					<span sclass="msg-time"><span class="z-icon-clock-o"/>3:15 pm</span>
 				</span>
 			</a>
 			<a label="See all messages" href="#"><span class="z-icon-arrow-right"/></a>

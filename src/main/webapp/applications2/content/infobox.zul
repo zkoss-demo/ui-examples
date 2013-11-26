@@ -35,7 +35,7 @@
 
   <div class="infobox infobox-red">
     <span sclass="infobox-icon">
-      <span zclass="z-icon-beaker"/>
+      <span zclass="z-icon-flask"/>
     </span>
     <div class="infobox-data">
       <label value="7" sclass="infobox-data-number"/>
@@ -94,7 +94,7 @@
 
   <div class="infobox infobox-grey infobox-small infobox-dark">
     <span sclass="infobox-icon">
-      <span zclass="z-icon-download-alt"/>
+      <span zclass="z-icon-download"/>
     </span>
     <div class="infobox-data">
       <div class="infobox-content">Downloads</div>

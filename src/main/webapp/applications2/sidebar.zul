@@ -21,12 +21,12 @@
 		<navitem label="Dashboard" iconSclass="z-icon-dashboard" selected="true"/>
 		<navitem label="Typography" iconSclass="z-icon-text-width"/>
 		<nav label="UI Elements" iconSclass="z-icon-desktop">
-			<navitem label="Elements" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Buttone &amp; Icons" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Treeview" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="jQuery UI" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Nestable Lists" iconSclass="z-icon-double-angle-right"/>
-			<nav label="Three Level Menu" iconSclass="z-icon-double-angle-right" sclass="grey">
+			<navitem label="Elements" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Buttone &amp; Icons" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Treeview" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="jQuery UI" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Nestable Lists" iconSclass="z-icon-angle-double-right"/>
+			<nav label="Three Level Menu" iconSclass="z-icon-angle-double-right" sclass="grey">
 				<navitem label="Item #1" iconSclass="z-icon-leaf"/>
 				<nav label="4th level" iconSclass="z-icon-pencil">
 					<navitem label="Add Product" iconSclass="z-icon-plus"/>
@@ -35,37 +35,37 @@
 			</nav>
 		</nav>
 		<nav label="Tables" iconSclass="z-icon-list">
-			<navitem label="Simple &amp; Dynamic" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="jqGrid plugin" iconSclass="z-icon-double-angle-right"/>
+			<navitem label="Simple &amp; Dynamic" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="jqGrid plugin" iconSclass="z-icon-angle-double-right"/>
 		</nav>
 		<nav label="Forms" iconSclass="z-icon-edit">
-			<navitem label="Form Elements" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Wizard &amp; Validation" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Wysiwyg &amp; Markdown" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Dropzone File Upload" iconSclass="z-icon-double-angle-right"/>
+			<navitem label="Form Elements" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Wizard &amp; Validation" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Wysiwyg &amp; Markdown" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Dropzone File Upload" iconSclass="z-icon-angle-double-right"/>
 		</nav>
 		<navitem label="Widgets" iconSclass="z-icon-list-alt" />
 		<navitem id="calitem" label="Calendar" iconSclass="z-icon-calendar" sclass="notify" tooltip="calpp, position=end_center, delay=0"/>
-		<navitem label="Gallery" iconSclass="z-icon-picture"/>
+		<navitem label="Gallery" iconSclass="z-icon-picture-o"/>
 		<nav label="More Pages" iconSclass="z-icon-tag">
-			<navitem label="User Profile" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Inbox" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Pricing Tables" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Invoice" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Timeline" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Login &amp; Register" iconSclass="z-icon-double-angle-right"/>
+			<navitem label="User Profile" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Inbox" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Pricing Tables" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Invoice" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Timeline" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Login &amp; Register" iconSclass="z-icon-angle-double-right"/>
 		</nav>
-		<nav label="Other Pages" badgeText="5" iconSclass="z-icon-file-alt">
-			<navitem label="FAQ" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Error 404" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Error 500" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Grid" iconSclass="z-icon-double-angle-right"/>
-			<navitem label="Blank Page" iconSclass="z-icon-double-angle-right"/>
+		<nav label="Other Pages" badgeText="5" iconSclass="z-icon-file-o">
+			<navitem label="FAQ" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Error 404" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Error 500" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Grid" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="Blank Page" iconSclass="z-icon-angle-double-right"/>
 		</nav>
 	</navbar>
 	<!-- Toggler -->
 	<div sclass="sidebar-collapse">
-		<a id="toggler" iconSclass="z-icon-double-angle-left"/>
+		<a id="toggler" iconSclass="z-icon-angle-double-left"/>
 	</div>
 	<!-- Tooptip for Calender Navitem -->
 	<popup id="calpp" zclass="tooltip" sclass="right tooltip-error cal">

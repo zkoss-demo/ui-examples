@@ -8,7 +8,7 @@
       <tab label="Members"/>
       <tab label="Tasks" selected="true"/>
     </tabs>
-    <tabpanels>
+    <tabpanels> 
       <!-- Tab Comments Content -->
       <tabpanel>
         <vlayout>
@@ -24,14 +24,14 @@
                 </div>
                 <div sclass="body">
                   <a label="Bob Doe" href="#" sclass="name"/>
-                  <a label="6 min" iconSclass="z-icon-time" sclass="time green"/>
+                  <a label="6 min" iconSclass="z-icon-clock-o" sclass="time green"/>
                   <div sclass="text">
                     <span class="z-icon-quote-left"/>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &#8230;
                   </div>
                   <div sclass="tools action">
                     <a iconSclass="z-icon-pencil blue bigger-125" href="#"/>
-                    <a iconSclass="z-icon-trash red bigger-125" href="#"/>
+                    <a iconSclass="z-icon-trash-o red bigger-125" href="#"/>
                   </div>
                 </div>
               </row>
@@ -41,14 +41,14 @@
                 </div>
                 <div sclass="body">
                   <a label="Jennifer" href="#" sclass="name"/>
-                  <a label="15 min" iconSclass="z-icon-time" sclass="time blue"/>
+                  <a label="15 min" iconSclass="z-icon-clock-o" sclass="time blue"/>
                   <div sclass="text">
                     <span class="z-icon-quote-left"/>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &#8230;
                   </div>
                   <div sclass="tools action">
                     <a iconSclass="z-icon-pencil blue bigger-125" href="#"/>
-                    <a iconSclass="z-icon-trash red bigger-125" href="#"/>
+                    <a iconSclass="z-icon-trash-o red bigger-125" href="#"/>
                   </div>
                 </div>
               </row>
@@ -57,7 +57,7 @@
                   <image tooltiptext="Joe's Avatar" src="assets/avatars/avatar2.png"/>
                 </div>
                 <div sclass="body">
-                  <a label="22 min" iconSclass="z-icon-time" sclass="time orange"/>
+                  <a label="22 min" iconSclass="z-icon-clock-o" sclass="time orange"/>
                   <a label="Bob " href="#" sclass="name"/>
                   <div sclass="text">
                     <span class="z-icon-quote-left"/>
@@ -65,7 +65,7 @@
                   </div>
                   <div sclass="tools action">
                     <a iconSclass="z-icon-pencil blue bigger-125" href="#"/>
-                    <a iconSclass="z-icon-trash red bigger-125" href="#"/>
+                    <a iconSclass="z-icon-trash-o red bigger-125" href="#"/>
                   </div>
                 </div>
               </row>
@@ -75,14 +75,14 @@
                 </div>
                 <div sclass="body">
                   <a label="Rita" href="#" sclass="name"/>
-                  <a label="55 min" iconSclass="z-icon-time" sclass="time red"/>
+                  <a label="55 min" iconSclass="z-icon-clock-o" sclass="time red"/>
                   <div sclass="text">
                     <span class="z-icon-quote-left"/>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &#8230;
                   </div>
                   <div sclass="tools action">
                     <a iconSclass="z-icon-pencil blue bigger-125" href="#"/>
-                    <a iconSclass="z-icon-trash red bigger-125" href="#"/>
+                    <a iconSclass="z-icon-trash-o red bigger-125" href="#"/>
                   </div>
                 </div>
               </row>
@@ -107,7 +107,7 @@
               </div>
               <div sclass="body">
                 <a label="Bob Doe" href="#" sclass="name"/>
-                <a label="20 min" iconSclass="z-icon-time" sclass="time green"/>
+                <a label="20 min" iconSclass="z-icon-clock-o" sclass="time green"/>
                 <div sclass="relin">
                   <span sclass="label label-warning label-sm">pending</span>
                   <div sclass="relin">
@@ -123,7 +123,7 @@
               </div>
               <div sclass="body">
                 <a label="Joe Doe" href="#" sclass="name"/>
-                <a label="1 hour" iconSclass="z-icon-time" sclass="time green"/>
+                <a label="1 hour" iconSclass="z-icon-clock-o" sclass="time green"/>
                 <div sclass="relin">
                   <span sclass="label label-warning label-sm">pending</span>
                   <div sclass="relin">
@@ -139,7 +139,7 @@
               </div>
               <div sclass="body">
                 <a label="Jim Doe" href="#" sclass="name"/>
-                <a label="2 hour" iconSclass="z-icon-time" sclass="time green"/>
+                <a label="2 hour" iconSclass="z-icon-clock-o" sclass="time green"/>
                 <div sclass="relin">
                   <span class="label label-warning label-sm">pending</span>
                   <div sclass="relin">
@@ -155,7 +155,7 @@
               </div>
               <div sclass="body">
                 <a label="Alex Doe" href="#" sclass="name"/>
-                <a label="3 hour" iconSclass="z-icon-time" sclass="time green"/>
+                <a label="3 hour" iconSclass="z-icon-clock-o" sclass="time green"/>
                 <div sclass="relin">
                   <span sclass="label label-danger label-sm">blocked</span>
                 </div>
@@ -167,7 +167,7 @@
               </div>
               <div sclass="body">
                 <a label="Bob Doe" href="#" sclass="name"/>
-                <a label="6 hour" iconSclass="z-icon-time" sclass="time green"/>
+                <a label="6 hour" iconSclass="z-icon-clock-o" sclass="time green"/>
                 <div sclass="relin">
                   <span sclass="label label-success label-sm arrowed-in">approved</span>
                 </div>
@@ -179,7 +179,7 @@
               </div>
               <div sclass="body">
                 <a label="Susan" href="#" sclass="name"/>
-                <a label="yesterday" iconSclass="z-icon-time" sclass="time green"/>
+                <a label="yesterday" iconSclass="z-icon-clock-o" sclass="time green"/>
                 <div sclass="relin">
                   <span sclass="label label-success label-sm arrowed-in">approved</span>
                 </div>
@@ -191,7 +191,7 @@
               </div>
               <div sclass="body">
                 <a label="Phil Doe" href="#" sclass="name"/>
-                <a label="2 days ago" iconSclass="z-icon-time" sclass="time green"/>
+                <a label="2 days ago" iconSclass="z-icon-clock-o" sclass="time green"/>
                 <div sclass="relin">
                   <span sclass="label label-info label-sm arrowed-in arrowed-in-right">online</span>
                 </div>
@@ -203,7 +203,7 @@
               </div>
               <div sclass="body">
                 <a label="Alexa Doe" href="#" sclass="name"/>
-                <a label="3 days ago" iconSclass="z-icon-time" sclass="time green"/>
+                <a label="3 days ago" iconSclass="z-icon-clock-o" sclass="time green"/>
                 <div sclass="relin">
                   <span sclass="label label-success label-sm arrowed-in">approved</span>
                 </div>
@@ -222,12 +222,12 @@
       <!-- Tab Tasks Content -->
       <tabpanel>
         <a label="Sortable Lists" iconSclass="z-icon-list" sclass="green lighter rcaption"/>
-        <listbox id="lb" sclass="task" checkmark="true" multiple="true">
+        <listbox id="lb" sclass="task" checkmark="true" multiple="true" apply="applications2.TaskComposer">
           <listhead>
               <listheader/>
               <listheader width="100px"/>
           </listhead>
-          <listitem draggable="true" droppable="true" onDrop="doDrop(event,self);" sclass="task-orange">
+          <listitem draggable="true" droppable="true" sclass="task-orange">
             <listcell label="Answering customer questions" sclass="text"/>
             <listcell>
               <n:div class="pull-right easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="42" 
@@ -236,43 +236,43 @@
               </n:div>
             </listcell>
           </listitem>
-          <listitem draggable="true" droppable="true" onDrop="doDrop(event,self);" sclass="task-red">
+          <listitem draggable="true" droppable="true" sclass="task-red">
             <listcell label="Fixing bugs" sclass="text"/>
             <listcell>
               <div sclass="pull-right action">
                 <a iconSclass="z-icon-pencil blue" href="#"/>
-                <a iconSclass="z-icon-trash red" href="#"/>
+                <a iconSclass="z-icon-trash-o red" href="#"/>
                 <a iconSclass="z-icon-flag green" href="#"/>
               </div>
             </listcell>
           </listitem>
-          <listitem draggable="true" droppable="true" onDrop="doDrop(event,self);" sclass="task-default">
+          <listitem draggable="true" droppable="true" sclass="task-default">
             <listcell label="Adding new features" sclass="text"/>
             <listcell/>
           </listitem>
-          <listitem draggable="true" droppable="true" onDrop="doDrop(event,self);" sclass="task-blue">
+          <listitem draggable="true" droppable="true" sclass="task-blue">
             <listcell label="Upgrading scripts used in template" sclass="text"/>
             <listcell>
               <button sclass="btn btn-minier bigger btn-primary pull-right" iconSclass="z-icon-cog"
                 popup="cogtt, position=after_end"/>
             </listcell>
           </listitem>
-          <listitem draggable="true" droppable="true" onDrop="doDrop(event,self);" sclass="task-grey">
+          <listitem draggable="true" droppable="true" sclass="task-grey">
             <listcell label="Add new skins" sclass="text"/>
             <listcell/>
           </listitem>
-          <listitem draggable="true" droppable="true" onDrop="doDrop(event,self);" sclass="task-green">
+          <listitem draggable="true" droppable="true" sclass="task-green">
             <listcell label="Updating server software up" sclass="text"/>
             <listcell/>
           </listitem>
-          <listitem draggable="true" droppable="true" onDrop="doDrop(event,self);" sclass="task-pink">
+          <listitem draggable="true" droppable="true" sclass="task-pink">
             <listcell label="Cleaning up" sclass="text"/>
             <listcell/>
           </listitem>
         </listbox>
         <popup id="cogtt" sclass="cog">
-          <a iconSclass="z-icon-ok green bigger-110" tooltip="markpp, position=start_center, delay=0"/>
-          <a iconSclass="z-icon-trash red bigger-110" tooltip="delepp, position=start_center, delay=0"/>
+          <a iconSclass="z-icon-check green bigger-110" tooltip="markpp, position=start_center, delay=0"/>
+          <a iconSclass="z-icon-trash-o red bigger-110" tooltip="delepp, position=start_center, delay=0"/>
         </popup>
         <popup id="markpp" zclass="tooltip" sclass="tooltip-success left">
           <span zclass="tooltip-arrow"/>
@@ -282,26 +282,14 @@
           <span zclass="tooltip-arrow"/>
           <label zclass="tooltip-inner" value="Delete"/>
         </popup>
-        <zscript><![CDATA[
-          import java.util.*;
-          import org.zkoss.zul.*;
-          
-          List children = lb.getChildren();
-          void doDrop(DropEvent event, Component droped) {
-            Component dragged = event.getDragged();
-            int from = children.indexOf(dragged);
-            int to = children.indexOf(droped);
-            droped.getParent().insertBefore(dragged, droped);
-          }
-        ]]></zscript>
       </tabpanel>
     </tabpanels>
   </tabbox>
   <!-- Popup of tab members -->
   <popup id="statustt" sclass="cog" style="margin-left:8px">
-    <a iconSclass="z-icon-ok green bigger-110" tooltip="aprpp, position=end_center, delay=0"/>
-    <a iconSclass="z-icon-remove orange bigger-110" tooltip="rejpp, position=end_center, delay=0"/>
-    <a iconSclass="z-icon-trash red bigger-110" tooltip="trapp, position=end_center, delay=0"/>
+    <a iconSclass="z-icon-check green bigger-110" tooltip="aprpp, position=end_center, delay=0"/>
+    <a iconSclass="z-icon-times orange bigger-110" tooltip="rejpp, position=end_center, delay=0"/>
+    <a iconSclass="z-icon-trash-o red bigger-110" tooltip="trapp, position=end_center, delay=0"/>
   </popup>
   <popup id="aprpp" zclass="tooltip" sclass="right tooltip-success">
     <span zclass="tooltip-arrow"/>
