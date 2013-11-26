@@ -36,12 +36,12 @@ public class SidebarComposer extends SelectorComposer<Component> {
 			sidebar.setSclass("sidebar");
 			navbar.setCollapsed(false);
 			calitem.setTooltip("calpp, position=end_center, delay=0");
-			toggler.setIconSclass("z-icon-double-angle-left");
+			toggler.setIconSclass("z-icon-angle-double-left");
 		} else {
 			sidebar.setSclass("sidebar sidebar-min");
 			navbar.setCollapsed(true);
 			calitem.setTooltip("");
-			toggler.setIconSclass("z-icon-double-angle-right");
+			toggler.setIconSclass("z-icon-angle-double-right");
 		}
 		// Force the hlayout contains sidebar to recalculate its size
 		Clients.resize(sidebar.getRoot().query("#main"));

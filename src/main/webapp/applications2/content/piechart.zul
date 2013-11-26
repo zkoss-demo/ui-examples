@@ -17,16 +17,16 @@
       <separator sclass="double16" bar="true"/>
       <hlayout sclass="sign-group">
         <div hflex="1">
-            <a iconSclass="z-icon-facebook-sign blue icon-2x" label="likes" sclass="grey sign"/>
-          <label value="1,255" class="bigger pull-right" sclass="grey" style="font-size:19px"/>
+            <a iconSclass="z-icon-facebook-square blue icon-2x" label="likes" sclass="grey sign"/>
+          <label value="1,255" sclass="bigger pull-right grey" style="font-size:19px;line-height:39px;"/>
         </div>
         <div hflex="1">
-          <a iconSclass="z-icon-twitter-sign purple icon-2x" label="tweets" sclass="grey sign"/>
-          <label value="941" class="bigger pull-right" sclass="grey" style="font-size:19px"/>
+          <a iconSclass="z-icon-twitter-square purple icon-2x" label="tweets" sclass="grey sign"/>
+          <label value="941" sclass="bigger pull-right grey" style="font-size:19px;line-height:39px;"/>
         </div>
         <div hflex="1">
-            <a iconSclass="z-icon-pinterest-sign red icon-2x" label="pins" sclass="grey sign"/>
-          <label value="1,050" class="bigger pull-right" sclass="grey" style="font-size:19px"/>
+            <a iconSclass="z-icon-pinterest-square red icon-2x" label="pins" sclass="grey sign"/>
+          <label value="1,050" sclass="bigger pull-right grey" style="font-size:19px;line-height:39px;"/>
         </div>
       </hlayout>
     </vlayout>
