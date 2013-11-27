@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss.ui</groupId>
 	<artifactId>ui-examples</artifactId>
-	<version>0.8.0-SNAPSHOT</version>
+	<version>0.8.0</version>
 	<properties>
-		<zk.version>7.0.0-RC</zk.version>
+		<zk.version>7.0.0</zk.version>
 		<commons-io>1.3.1</commons-io>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
-		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
+		<packname>-${project.version}-${maven.build.timestamp}</packname>
 	</properties>
 	<packaging>war</packaging>
 	<name>The example Project</name>
@@ -20,6 +20,7 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+
 	<repositories>
 		<repository>
 			<id>ZK CE</id>
@@ -31,10 +32,6 @@
 			<name>ZK Evaluation Repository</name>
 			<url>http://mavensync.zkoss.org/eval</url>
 		</repository>
-    <repository>
-        <id>ZK EE</id>
-        <url>https://maven.zkoss.org/repo/zk/ee</url>
-    </repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
@@ -164,7 +161,7 @@
 							<goal>single</goal>
 						</goals>
 						<configuration>
-							<finalName>example${packname}</finalName>
+							<finalName>${project.artifactId}${packname}</finalName>
 							<appendAssemblyId>false</appendAssemblyId>
 							<descriptors>
 								<descriptor>assembly/webapp.xml</descriptor>
