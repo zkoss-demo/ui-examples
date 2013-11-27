@@ -1851,7 +1851,10 @@ a:focus {
 .alert.z-window .z-window-content {
   display: none;
 }
-.alert.z-window .z-window-icon {
+.alert.z-window .z-window-icon.z-window-close {
+  position: absolute;
+  top: 20px;
+  right: 15px;
   border: 0;
   opacity: 0.2;
   filter: alpha(opacity=20);
@@ -1859,17 +1862,18 @@ a:focus {
   background: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-.alert.z-window .z-window-icon:hover,
-.alert.z-window .z-window-icon:focus,
-.alert.z-window .z-window-icon:active {
+.alert.z-window .z-window-icon.z-window-close:hover,
+.alert.z-window .z-window-icon.z-window-close:focus,
+.alert.z-window .z-window-icon.z-window-close:active {
   background-color: transparent;
 }
-.alert.z-window .z-window-icon:hover {
+.alert.z-window .z-window-icon.z-window-close:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
 .alert-success.z-window .z-window-header {
   color: #468847;
+  padding: 0;
 }
 .infobox-container .z-hlayout,
 .rtab .z-hlayout {
